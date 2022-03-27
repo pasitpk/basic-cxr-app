@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 if __name__ == '__main__':
 
   load_dotenv()
+  HOST = os.getenv('HOST')
   PORT = int(os.getenv('PORT'))
   MODEL = os.getenv('MODEL')
   IMG_SIZE = int(os.getenv('IMG_SIZE'))
@@ -27,6 +28,7 @@ if __name__ == '__main__':
     examples=['./examples/normal.png', './examples/tb.png'],
     allow_flagging='never'
     ).launch(
+      server_name=HOST,
       server_port=PORT,
     )
 
