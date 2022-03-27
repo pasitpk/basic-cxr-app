@@ -11,7 +11,7 @@ if __name__ == '__main__':
   PORT = int(os.getenv('PORT'))
   MODEL = os.getenv('MODEL')
   IMG_SIZE = int(os.getenv('IMG_SIZE'))
-  NORMALIZE_HEATMAP = bool(os.getenv('NORMALIZE_HEATMAP'))
+  NORMALIZE_HEATMAP = os.getenv('NORMALIZE_HEATMAP').lower() == 'true'
   HEATMAP_THRESHOLD = float(os.getenv('HEATMAP_THRESHOLD'))
 
   clf = TBClassifier(MODEL, IMG_SIZE, NORMALIZE_HEATMAP, HEATMAP_THRESHOLD)
