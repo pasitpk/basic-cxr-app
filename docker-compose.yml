@@ -1,7 +1,7 @@
 version: "3"
    
 services:
-  wesafe-ai-ai:
+  ai4tb:
     restart: on-failure
     build: .
     container_name: ai4tb
