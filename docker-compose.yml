@@ -1,0 +1,13 @@
+version: "3"
+   
+services:
+  wesafe-ai-ai:
+    restart: on-failure
+    build: .
+    container_name: ai4tb
+    command: bash run.sh
+    volumes:
+      - .:/app
+    ports:
+      - "9898:9898"
+    network_mode: host
