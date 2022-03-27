@@ -8,6 +8,4 @@ services:
     command: bash run.sh
     volumes:
       - .:/app
-    ports:
-      - "9898:9898"
     network_mode: host
