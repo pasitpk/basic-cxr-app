@@ -13,7 +13,7 @@ if __name__ == '__main__':
   IMG_SIZE = int(os.getenv('IMG_SIZE'))
   NORMALIZE_HEATMAP = os.getenv('NORMALIZE_HEATMAP').lower() == 'true'
   HEATMAP_THRESHOLD = float(os.getenv('HEATMAP_THRESHOLD'))
-  SHARE = os.getenv('NORMALIZE_HEATMAP').lower() == 'true'
+  SHARE = os.getenv('SHARE').lower() == 'true'
 
   clf = TBClassifier(MODEL, IMG_SIZE, NORMALIZE_HEATMAP, HEATMAP_THRESHOLD)
 
